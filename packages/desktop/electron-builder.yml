@@ -1,0 +1,41 @@
+appId: com.animationmaker.app
+productName: 2D Animation Maker
+copyright: Copyright © 2024
+
+directories:
+  output: ../../release
+
+files:
+  - dist/**/*
+  - dist-electron/**/*.js
+  - package.json
+
+extraResources:
+  - from: ../../resources/ffmpeg/
+    to: ffmpeg/
+    filter:
+      - '**/*'
+
+win:
+  target:
+    - target: nsis
+      arch:
+        - x64
+    - target: portable
+      arch:
+        - x64
+  icon: build/icon.ico
+  publisherName: 2D Animation Maker
+
+nsis:
+  oneClick: false
+  perMachine: false
+  allowToChangeInstallationDirectory: true
+  createDesktopShortcut: true
+  installerIcon: build/icon.ico
+
+publish:
+  - provider: github
+    owner: username
+    repo: 2d-animation-maker
+    releaseType: draft

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108.0"
+    android:viewportHeight="108.0">
+
+    <!-- 圆角矩形底板，25dp 圆角，粉→紫渐变 -->
+    <path
+        android:pathData="M25,0 L83,0 A25,25 0 0,1 108,25 L108,83 A25,25 0 0,1 83,108 L25,108 A25,25 0 0,1 0,83 L0,25 A25,25 0 0,1 25,0 Z">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:type="linear"
+                android:startX="108.0"
+                android:startY="0.0"
+                android:endX="0.0"
+                android:endY="108.0">
+                <item android:color="#FFFF7AD1" android:offset="0.0" />
+                <item android:color="#FFD777F5" android:offset="1.0" />
+            </gradient>
+        </aapt:attr>
+    </path>
+
+    <!-- A 字母主体（等比例放大版，不变） -->
+    <path
+        android:fillColor="#FFFFFFFF"
+        android:pathData="M36.5,81.75 L50.25,24.25 L57.75,24.25 L71.5,81.75 L64,81.75 L54,39.925 L44,81.75 Z" />
+
+    <!-- A 字母中间横杠（等比例放大版，不变） -->
+    <path
+        android:fillColor="#FFFFFFFF"
+        android:pathData="M50.575,54.25 L57.425,54.25 L58.625,59.25 L49.375,59.25 Z" />
+
+</vector>

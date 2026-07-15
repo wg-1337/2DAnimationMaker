@@ -1,0 +1,22 @@
+{
+  "name": "2d-animation-maker",
+  "version": "0.1.0",
+  "private": true,
+  "description": "2D Animation Maker — 70% 2D动画 + 30% 视频剪辑一体化工具",
+  "scripts": {
+    "dev": "turbo dev",
+    "build": "turbo build",
+    "build:desktop": "turbo build --filter=@animation-maker/desktop",
+    "build:mobile": "turbo build --filter=@animation-maker/mobile",
+    "build:sdk": "turbo build --filter=@animation-maker/plugin-sdk",
+    "typecheck": "turbo typecheck",
+    "test": "turbo test",
+    "test:e2e": "turbo test:e2e",
+    "lint": "turbo lint",
+    "clean": "turbo clean"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "packageManager": "pnpm@9.15.4"
+}

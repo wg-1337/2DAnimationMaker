@@ -1,0 +1,135 @@
+/* 工具栏样式 */
+.toolBar {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  min-width: 48px;
+  background-color: var(--bg-panel);
+  border-right: 1px solid var(--border-panel);
+  overflow: hidden;
+  transition: width 0.2s ease;
+}
+
+.toolBar.collapsed {
+  width: 48px;
+}
+
+/* 工具列表 */
+.toolList {
+  flex: 1;
+  overflow-y: auto;
+  padding: var(--spacing-xs) 0;
+}
+
+.toolGroup {
+  position: relative;
+}
+
+/* 工具按钮 */
+.toolBtn {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 40px;
+  padding: 0 var(--spacing-sm);
+  background: transparent;
+  border: none;
+  border-left: 2px solid transparent;
+  color: var(--fg-secondary);
+  font-size: var(--font-sm);
+  cursor: pointer;
+  transition: background-color 0.15s, color 0.15s;
+  gap: var(--spacing-sm);
+}
+
+.toolBtn:hover {
+  background-color: var(--surface-hover);
+  color: var(--fg-primary);
+}
+
+.toolBtn.active {
+  background-color: var(--surface-selected);
+  color: var(--fg-primary);
+  border-left-color: var(--accent-primary);
+}
+
+.collapsed .toolBtn {
+  justify-content: center;
+  padding: 0;
+  height: 48px;
+}
+
+.toolIcon {
+  font-size: 18px;
+  width: 24px;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.toolLabel {
+  flex: 1;
+  text-align: left;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.toolShortcut {
+  font-size: var(--font-xs);
+  color: var(--fg-disabled);
+  background-color: var(--surface-input);
+  padding: 1px 4px;
+  border-radius: var(--radius-sm);
+}
+
+.collapsed .toolLabel,
+.collapsed .toolShortcut {
+  display: none;
+}
+
+/* 子工具菜单 */
+.subTools {
+  padding-left: var(--spacing-sm);
+}
+
+.subToolBtn {
+  padding-left: var(--spacing-lg);
+  height: 32px;
+}
+
+/* 插件区域 */
+.pluginSection {
+  padding: var(--spacing-xs) 0;
+}
+
+.separator {
+  height: 1px;
+  margin: var(--spacing-sm);
+  background-color: var(--border-divider);
+}
+
+/* 折叠按钮 */
+.collapseBtn,
+.expandBtn {
+  flex-shrink: 0;
+  padding: var(--spacing-xs);
+  display: flex;
+  justify-content: center;
+}
+
+.collapseBtn button,
+.expandBtn button {
+  background: transparent;
+  border: none;
+  color: var(--fg-secondary);
+  font-size: 12px;
+  cursor: pointer;
+  padding: 4px;
+  border-radius: var(--radius-sm);
+}
+
+.collapseBtn button:hover,
+.expandBtn button:hover {
+  background-color: var(--surface-hover);
+  color: var(--fg-primary);
+}

@@ -1,0 +1,57 @@
+.bar {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-xs) var(--spacing-sm);
+  background-color: var(--bg-panel);
+  border-bottom: 1px solid var(--border-panel);
+  min-height: 32px;
+  flex-shrink: 0;
+}
+
+.field {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: var(--font-xs);
+  color: var(--fg-secondary);
+  cursor: pointer;
+}
+
+.colorInput {
+  width: 24px;
+  height: 24px;
+  border: 1px solid var(--border-input);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  padding: 0;
+  background: none;
+}
+
+.colorInput::-webkit-color-swatch-wrapper {
+  padding: 0;
+}
+
+.colorInput::-webkit-color-swatch {
+  border: none;
+  border-radius: 2px;
+}
+
+.slider {
+  width: 60px;
+  height: 4px;
+  accent-color: var(--accent-primary);
+  cursor: pointer;
+}
+
+.val {
+  font-size: 10px;
+  color: var(--fg-secondary);
+  min-width: 28px;
+}
+
+.hint {
+  font-size: var(--font-xs);
+  color: var(--fg-disabled);
+  font-style: italic;
+}

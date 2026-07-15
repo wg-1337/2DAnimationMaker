@@ -1,0 +1,30 @@
+{
+  "name": "@animation-maker/desktop",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Electron 桌面应用 — 主进程 + preload",
+  "main": "electron/main.js",
+  "scripts": {
+    "dev": "electron .",
+    "build": "tsc -p tsconfig.electron.json",
+    "typecheck": "tsc --noEmit -p tsconfig.electron.json",
+    "lint": "eslint electron/ --ext .ts",
+    "clean": "rm -rf dist"
+  },
+  "dependencies": {
+    "@animation-maker/shared": "workspace:*",
+    "better-sqlite3": "^11.0.0",
+    "chokidar": "^3.6.0",
+    "electron-log": "^5.1.0",
+    "electron-updater": "^6.2.0",
+    "fluent-ffmpeg": "^2.1.0",
+    "winston": "^3.14.0"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^7.6.0",
+    "@types/fluent-ffmpeg": "^2.1.0",
+    "electron": "^31.0.0",
+    "electron-builder": "^24.13.0",
+    "typescript": "^5.5.0"
+  }
+}

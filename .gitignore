@@ -1,0 +1,44 @@
+# Dependencies
+node_modules/
+
+# Build outputs
+dist/
+build/
+release/
+out/
+
+# Electron
+packages/desktop/dist/
+
+# IDE
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Logs
+*.log
+npm-debug.log*
+
+# Test
+coverage/
+test-results/
+
+# FFmpeg binaries (下载后解压，不提交二进制)
+resources/ffmpeg/*/
+!resources/ffmpeg/**/*.gitkeep
+
+# Android
+packages/mobile/android/
+
+# Temporary
+*.tmp
+.cache/

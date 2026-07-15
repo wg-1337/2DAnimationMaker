@@ -1,0 +1,98 @@
+/* 菜单栏样式 */
+.menuBar {
+  display: flex;
+  align-items: center;
+  height: 32px;
+  background-color: var(--bg-panel);
+  border-bottom: 1px solid var(--border-panel);
+  padding: 0 var(--spacing-sm);
+  user-select: none;
+  -webkit-app-region: no-drag;
+  flex-shrink: 0;
+}
+
+.menuGroup {
+  position: relative;
+}
+
+.menuTrigger {
+  display: flex;
+  align-items: center;
+  height: 28px;
+  padding: 0 var(--spacing-sm);
+  font-size: var(--font-sm);
+  color: var(--fg-secondary);
+  background: transparent;
+  border: none;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.menuTrigger:hover,
+.menuTrigger.active {
+  background-color: var(--surface-hover);
+  color: var(--fg-primary);
+}
+
+/* 下拉菜单 */
+.dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+  min-width: 200px;
+  padding: var(--spacing-xs) 0;
+  background-color: var(--bg-dropdown);
+  border: 1px solid var(--border-panel);
+  border-radius: var(--radius-md);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.menuItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 28px;
+  padding: 0 var(--spacing-md);
+  font-size: var(--font-sm);
+  color: var(--fg-primary);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.menuItem:hover {
+  background-color: var(--surface-hover);
+}
+
+.menuItem:disabled {
+  color: var(--fg-disabled);
+  cursor: default;
+}
+
+.itemLabel {
+  flex: 1;
+}
+
+.itemShortcut {
+  margin-left: var(--spacing-lg);
+  font-size: var(--font-xs);
+  color: var(--fg-secondary);
+}
+
+.separator {
+  height: 1px;
+  margin: var(--spacing-xs) var(--spacing-sm);
+  background-color: var(--border-divider);
+}
+
+/* 拖拽区域 (Electron 无边框窗口标题栏拖拽) */
+.dragRegion {
+  flex: 1;
+  height: 100%;
+  -webkit-app-region: drag;
+}

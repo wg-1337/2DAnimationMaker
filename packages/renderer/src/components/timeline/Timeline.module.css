@@ -1,0 +1,228 @@
+/* 时间轴样式 */
+.timeline {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background-color: var(--bg-panel);
+  user-select: none;
+}
+
+.emptyState {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: var(--fg-disabled);
+  font-size: var(--font-sm);
+}
+
+/* 控制栏 */
+.controls {
+  display: flex;
+  align-items: center;
+  height: 32px;
+  padding: 0 var(--spacing-sm);
+  border-bottom: 1px solid var(--border-panel);
+  gap: var(--spacing-sm);
+  flex-shrink: 0;
+}
+
+.playbackControls {
+  display: flex;
+  gap: 2px;
+}
+
+.playbackControls button {
+  background: transparent;
+  border: none;
+  color: var(--fg-secondary);
+  font-size: 14px;
+  cursor: pointer;
+  padding: 2px 6px;
+  border-radius: var(--radius-sm);
+}
+
+.playbackControls button:hover {
+  background-color: var(--surface-hover);
+  color: var(--fg-primary);
+}
+
+.timeDisplay {
+  font-size: var(--font-sm);
+  color: var(--fg-primary);
+  font-family: monospace;
+  min-width: 100px;
+  text-align: center;
+}
+
+.zoomControls {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-left: auto;
+}
+
+.zoomControls button {
+  background: transparent;
+  border: none;
+  color: var(--fg-secondary);
+  font-size: 16px;
+  cursor: pointer;
+  padding: 0 6px;
+  border-radius: var(--radius-sm);
+}
+
+.zoomControls button:hover {
+  background-color: var(--surface-hover);
+  color: var(--fg-primary);
+}
+
+.zoomSlider {
+  width: 80px;
+  height: 4px;
+  cursor: pointer;
+  accent-color: var(--accent-primary);
+}
+
+/* 主体 */
+.body {
+  flex: 1;
+  display: flex;
+  overflow: hidden;
+}
+
+/* 轨道标签 */
+.trackLabels {
+  flex-shrink: 0;
+  overflow: hidden;
+  border-right: 1px solid var(--border-panel);
+}
+
+.rulerSpacer {
+  background-color: var(--bg-editor);
+  border-bottom: 1px solid var(--border-panel);
+}
+
+.trackLabel {
+  display: flex;
+  align-items: center;
+  padding: 0 var(--spacing-sm);
+  border-bottom: 1px solid var(--border-divider);
+  font-size: var(--font-xs);
+  color: var(--fg-secondary);
+  gap: var(--spacing-xs);
+  overflow: hidden;
+}
+
+.trackType {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  background-color: var(--surface-input);
+  border-radius: var(--radius-sm);
+  font-size: 10px;
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+.trackName {
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.trackIcons {
+  font-size: 10px;
+  flex-shrink: 0;
+}
+
+/* 滚动区域 */
+.trackContent {
+  flex: 1;
+  position: relative;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+/* 标尺 */
+.ruler {
+  position: sticky;
+  top: 0;
+  background-color: var(--bg-editor);
+  border-bottom: 1px solid var(--border-panel);
+  cursor: pointer;
+  z-index: 5;
+}
+
+.rulerMark {
+  position: absolute;
+  top: 0;
+  height: 100%;
+}
+
+.rulerTick {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 1px;
+  height: 8px;
+  background-color: var(--fg-disabled);
+}
+
+.rulerLabel {
+  position: absolute;
+  top: 2px;
+  left: 4px;
+  font-size: 10px;
+  font-family: monospace;
+  color: var(--fg-secondary);
+  white-space: nowrap;
+}
+
+/* 轨道 */
+.track {
+  position: relative;
+  border-bottom: 1px solid var(--border-divider);
+}
+
+/* 片段 (Clip) */
+.clip {
+  position: absolute;
+  top: 2px;
+  bottom: 2px;
+  background-color: var(--accent-primary);
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  padding: 0 var(--spacing-xs);
+  overflow: hidden;
+  cursor: pointer;
+  opacity: 0.9;
+}
+
+.clip:hover {
+  opacity: 1;
+  outline: 1px solid var(--accent-primary);
+}
+
+.clipName {
+  font-size: 10px;
+  color: #fff;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* 播放头 */
+.playhead {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background-color: #ff4444;
+  z-index: 10;
+  pointer-events: none;
+}
