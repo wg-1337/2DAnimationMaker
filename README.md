@@ -46,4 +46,4 @@ packages/
 
 ## 许可证
 
-MIT
+GPL3.0
